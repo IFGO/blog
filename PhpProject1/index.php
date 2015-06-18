@@ -15,6 +15,7 @@ and open the template in the editor.
         echo "O Diego é feio";
         echo "Fazendo update";
         echo "outro update";
+        echo "updateeeeeeeeee";
         ?>
     </body>
 </html>
