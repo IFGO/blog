@@ -11,7 +11,8 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        // put your code here
+        include "persistencia/Conexao.php";
+        $con = new Conexao();
         ?>
     </body>
 </html>
