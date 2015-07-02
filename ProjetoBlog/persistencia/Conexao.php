@@ -17,6 +17,10 @@ class Conexao {
         }
     }
     
+    function __inserirUsuario() {
+        
+    }
+    
     function __destruct() {
         mysqli_close($this->conexao);
     }
