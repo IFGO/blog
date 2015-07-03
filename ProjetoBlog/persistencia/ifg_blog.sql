@@ -1,31 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.1.14
--- http://www.phpmyadmin.net
---
--- Host: 127.0.0.1
--- Generation Time: Jul 02, 2015 at 02:16 AM
--- Server version: 5.6.17
--- PHP Version: 5.5.12
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
---
--- Database: `ifg_blog`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `blg_artigo`
---
-
 CREATE TABLE IF NOT EXISTS `blg_artigo` (
   `artigo_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `BLG_USUARIO_usuario_id` int(10) unsigned NOT NULL,
@@ -35,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `blg_artigo` (
   `artigo_datacriacao` datetime DEFAULT NULL,
   PRIMARY KEY (`artigo_id`),
   KEY `BLG_ARTIGO_FKIndex1` (`BLG_USUARIO_usuario_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf-8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -49,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `blg_artigo_tag` (
   PRIMARY KEY (`BLG_ARTIGO_artigo_id`,`BLG_TAG_tag_id`),
   KEY `BLG_ARTIGO_has_BLG_TAG_FKIndex1` (`BLG_ARTIGO_artigo_id`),
   KEY `BLG_ARTIGO_has_BLG_TAG_FKIndex2` (`BLG_TAG_tag_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf-8;
 
 -- --------------------------------------------------------
 
@@ -65,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `blg_comentario` (
   `comentario_conteudo` text NOT NULL,
   PRIMARY KEY (`comentario_id`),
   KEY `BLG_COMENTARIO_FKIndex1` (`BLG_ARTIGO_artigo_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf-8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -77,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `blg_tag` (
   `tag_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `tag_nome` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`tag_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf-8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -93,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `blg_usuario` (
   `usuario_apelido` varchar(255) NOT NULL,
   `usuario_senha` varchar(255) NOT NULL,
   PRIMARY KEY (`usuario_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf-8 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

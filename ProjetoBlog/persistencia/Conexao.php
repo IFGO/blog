@@ -1,10 +1,10 @@
 <?php
 class Conexao {
     private $conexao;
-    private $usuario="root"; //u142881537_brog
-    private $senha="";//brogao@321
-    private $host="localhost";//brogao.96.lt
-    private $db="ifg_blog";//u142881537_brog 
+    private $usuario="blog"; //u142881537_brog
+    private $senha="blog123";//brogao@321
+    private $host="104.236.106.180";//104.236.106.180
+    private $db="blog";//u142881537_brog 
 
    
     function __construct() {
@@ -17,8 +17,8 @@ class Conexao {
         }
     }
     
-    function __inserirUsuario() {
-        
+    function getConection() {
+        return $this->conexao;
     }
     
     function __destruct() {
