@@ -5,36 +5,62 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    
 <head>	
-    <title>BrogÃ£oâ€º Login</title>
+    <title>Brogão› Login</title>
 	<link href="estilo/css/bootstrap.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	<link href="estilo/css/styles.css" rel="stylesheet">
+            <meta charset="ISO-8859-1">
+               
+               
+               <style>
+                   body{
+                        background: url("estilo/imagens/fundo_login.jpg");
+                        
+                   }
+                  
+                   
+                   .loginform{
+                      border:5px white solid;
+                      border-radius: 10px;
+                       margin: 0 auto;
+                       width: 400px;
+                       padding: 20px;
+                     
+                   }
+                   
+                   .loginform .input{
+                       width: 300px;
+                   }
+                   
+              </style>
+                   
+                   
 </head>
-	<body class= "login">
+    <body class= "login">	
+        <div id="login">
+            <h1><a href="http://brogao.96.lt/" title="Brogão" tabindex="-1">Brogão</a></h1>
 	
-	<div id="login">
-		<h1><a href="http://brogao.96.lt/" title="BrogÃ£o" tabindex="-1">BrogÃ£o</a></h1>
-	
-	<form name="loginform" class="loginform" action="./Mentais Mapas â€º Login_files/Mentais Mapas â€º Login.html" method="post">
-	<p>
-		<label for="user_login">Nome de usuÃ¡rio<br>
-		<input type="text" name="log" id="user_login" class="input" value="" size="20"></label>
-	</p>
-	<p>
-		<label for="user_pass">Senha<br>
-		<input type="password" name="pwd" id="user_pass" class="input" value="" size="20"></label>
-	</p>
-		<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"> Lembrar-me</label></p>
-	<p class="submit">
-		<input type="submit" name="brogao-submit" id="brogao-submit" class="button button-primary button-large" value="Login">
-		<input type="hidden" name="redirect_to" value="http://brogao.96.lt/">
-		<input type="hidden" name="testcookie" value="1">
-	</p>
-    </form>
-                
-            
+	<form name="loginform" class="loginform" action="./Mentais Mapas › Login_files/Mentais Mapas › Login.html" method="post">
+                    <p>
+                        <label for="user_login">Nome de usuário<br>
+                        <input type="text" name="log" id="user_login" class="input" value="" size="20"></label>
+                    </p>
+                    <p>
+                        <label for="user_pass">Senha<br>
+                        <input type="password" name="pwd" id="user_pass" class="input" value="" size="20"></label>
+                    </p>
+                    <p class="forgetmenot">
+                        <label for="rememberme">
+                        <input name="rememberme" type="checkbox" id="rememberme" value="forever"> Lembrar-me</label>
+                    </p>
+                    <p class="submit">
+                        <input type="submit" name="brogao-submit" id="brogao-submit" class="button button-primary button-large" value="Login">
+                        <input type="hidden" name="redirect_to" value="http://brogao.96.lt/">
+                        <input type="hidden" name="testcookie" value="1">
+                    </p>
+               </form>
 
-    </div>
+        </div>
+  </body>
 </html>
