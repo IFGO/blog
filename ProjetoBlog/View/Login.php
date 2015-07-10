@@ -14,8 +14,7 @@ and open the template in the editor.
 
 
     </head>
-    <body style="background: #eee;">
-        <div class="principal">
+    <body  style="background: #eee;">
             <div class="container">
                    <p><br></p>
                    <div class="row">
@@ -50,6 +49,5 @@ and open the template in the editor.
                           </div>
                    </div>
             </div>   
-        </div> 
     </body>
 </html>
