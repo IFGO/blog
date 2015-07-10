@@ -6797,4 +6797,13 @@ button.close {
     display: none !important;
   }
 }
+
+.principal{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-190px;
+	margin-left:-900px;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
