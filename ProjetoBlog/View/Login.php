@@ -5,62 +5,48 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-<head>	
-    <title>Brogão› Login</title>
-	<link href="estilo/css/bootstrap.min.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-	<link href="estilo/css/styles.css" rel="stylesheet">
-            <meta charset="ISO-8859-1">
-               
-               
-               <style>
-                   body{
-                        background: url("estilo/imagens/fundo_login.jpg");
-                        
-                   }
-                  
-                   
-                   .loginform{
-                      border:5px white solid;
-                      border-radius: 10px;
-                       margin: 0 auto;
-                       width: 400px;
-                       padding: 20px;
-                     
-                   }
-                   
-                   .loginform .input{
-                       width: 300px;
-                   }
-                   
-              </style>
-                   
-                   
-</head>
-    <body class= "login">	
-        <div id="login">
-            <h1><a href="http://brogao.96.lt/" title="Brogão" tabindex="-1">Brogão</a></h1>
-	
-	<form name="loginform" class="loginform" action="./Mentais Mapas › Login_files/Mentais Mapas › Login.html" method="post">
-                    <p>
-                        <label for="user_login">Nome de usuário<br>
-                        <input type="text" name="log" id="user_login" class="input" value="" size="20"></label>
-                    </p>
-                    <p>
-                        <label for="user_pass">Senha<br>
-                        <input type="password" name="pwd" id="user_pass" class="input" value="" size="20"></label>
-                    </p>
-                    <p class="forgetmenot">
-                        <label for="rememberme">
-                        <input name="rememberme" type="checkbox" id="rememberme" value="forever"> Lembrar-me</label>
-                    </p>
-                    <p class="submit">
-                        <input type="submit" name="brogao-submit" id="brogao-submit" class="button button-primary button-large" value="Login">
-                        <input type="hidden" name="redirect_to" value="http://brogao.96.lt/">
-                        <input type="hidden" name="testcookie" value="1">
-                    </p>
-               </form>
+    <head>	
+        <title>Brogão› Login</title>
+        <link href="estilo/css/bootstrap.min.css" rel="stylesheet">
+        <link href="estilo/css/styles.css" rel="stylesheet">
+        <link href="../estilo/css/bootstrap.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
 
-        </div>
-  </body>
+
+    </head>
+    <body style="background: #eee;">
+
+        <div class="container">
+               <p><br></p>
+               <div class="row">
+                      <div class="col-md-8"></div>
+                      <div class="col-md-4">
+                             <div class="panel panel-default">
+                                    <div class="panel-body">
+                                              <div class="page-header">
+                                                   <h3>Login</h3>
+                                              </div>
+                                              <form>
+                                                        <div class="form-group">
+                                                                  <label for="exampleInputEmail1">Usuário</label>
+                                                                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                                  <label for="exampleInputPassword1">Senha</label>
+                                                                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+                                                        </div>
+                                                  <hr/>
+                                                        <button type="submit" class="btn btn-primary">Login</button>
+                                                        <p></br></p>
+                                              </form>
+                                    </div>
+                             </div>
+                      </div>
+               </div>
+        </div>   
+
+
+
+
+    </body>
 </html>
