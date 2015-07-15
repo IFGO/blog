@@ -15,7 +15,34 @@
             <div class="row display-table-row">
                 <!-- menu lateral -->
                 <div class="col-md-2 display-table-cell valign-top" id="side-menu">
-                     <h1>Navegação</h1>
+                     <h1>Navegação</h1>  
+                     <ul>
+                         <li class="link">
+                             <a href="admin.php">
+                                 <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                                 <span>Painel</span>
+                             </a>
+                         </li>
+
+                         <li class="link">
+                             <a href="#collapse-post" data-toggle="collapse" aria-controls="collapse-post">
+                                 <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                                 <span>Artigos</span>
+                                 <span class="label label-success pull-right">20</span>
+                             </a>
+                             <ul class="collapse collapseable" id="collapse-post">
+                                <li><a href="novo-artigo.php">Adicionar Novo Artigo</a></li>
+                                <li><a href="artigos.php">Listar Artigos</a></li>   
+                             </ul>
+                         </li>
+                         
+                         <li class="link">
+                             <a href="usuarios.php">
+                                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                 <span>Usuários</span>
+                             </a>
+                         </li>
+                     </ul>
                 </div>
                 <!-- área principal -->
                 <div class="col-md-10  display-table-cell valign-top">
