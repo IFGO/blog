@@ -31,8 +31,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Painel de Administração<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Usuários</a></li>
-                                <li><a href="#">Artigos</a></li>
+                                <li><a href="usuarios.php">Usuários</a></li>
+                                <li><a href="artigos.php">Artigos</a></li>
                                 <li><a href="#">Mais alguma coisa...</a></li>
                             </ul>
                         </li>
