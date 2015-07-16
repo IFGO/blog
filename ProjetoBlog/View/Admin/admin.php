@@ -14,46 +14,54 @@
         <div class="container-fluid display-table">
             <div class="row display-table-row">
                 <!-- menu lateral -->
-                <div class="col-md-2 display-table-cell valign-top" id="side-menu">
-                     <h1>Navegação</h1>  
+                <div class="col-md-2 col-sm-1 hidden-xs display-table-cell valign-top" id="side-menu">
+                     <h1 class="hidden-xs hidden-sm">Navegação</h1>  
                      <ul>
-                         <li class="link">
+                         <li class="link active">
                              <a href="admin.php">
                                  <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-                                 <span>Painel</span>
+                                 <span class="hidden-sm hidden-xs">Painel</span>
                              </a>
                          </li>
 
                          <li class="link">
                              <a href="#collapse-post" data-toggle="collapse" aria-controls="collapse-post">
                                  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                                 <span>Artigos</span>
-                                 <span class="label label-success pull-right">20</span>
+                                 <span class="hidden-sm hidden-xs">Artigos</span>
+                                 <span class="label label-success pull-right hidden-xs hidden-sm">20</span>
                              </a>
                              <ul class="collapse collapseable" id="collapse-post">
                                 <li><a href="novo-artigo.php">Adicionar Novo Artigo</a></li>
                                 <li><a href="artigos.php">Listar Artigos</a></li>   
                              </ul>
                          </li>
-                         
+
                          <li class="link">
                              <a href="usuarios.php">
                                  <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                                 <span>Usuários</span>
+                                 <span class="hidden-sm hidden-xs">Usuários</span>
                              </a>
                          </li>
                      </ul>
                 </div>
                 <!-- área principal -->
-                <div class="col-md-10  display-table-cell valign-top">
+                <div class="col-md-10 col-sm-11 display-table-cell valign-top">
                     <div class="row">
                         <header id="nav-header" class="clearfix">
                             <div class="col-md-5">
-                                <input type="text" id="header-search-field" placeholder="Pesquisar..."> 
+                            <nav class="navbar-default">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                            </nav>
+                                <input type="text" class="hidden-sm hidden-xs"id="header-search-field" placeholder="Pesquisar..."> 
                             </div>
                             <div class="col-md-7">
                                 <ul class="pull-right">
-                                    <li id="bemvindo">Bem vindo ao Painel de Administração.</li>
+                                    <li id="bemvindo" class="hidden-xs">Bem vindo ao Painel de Administração.</li>
                                     <li class="fixed-width">
                                         <a href="#">
                                             <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
