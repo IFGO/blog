@@ -16,13 +16,13 @@ class ArtigoDAO{
          
         $strSQL = "INSERT INTO blg_artigo(artigo_titulo,artigo_corpo,artigo_datamodificacao,artigo_datacriacao,usuario_id) "
                 . "VALUES ('".$artigo->getTitulo()."','".$artigo->getCorpo()."','".$artigo->getData_modificacao()."','"
-                .$artigo->getData_criacao()."', ".$artigo->getId_usuario()."')"; 
+                .$artigo->getData_criacao()."', ".$artigo->getId_usuario().")"; 
         
-        echo $strSQL;
+       
         
-        mysqli_query($this->conexao,$strSQL);
+       mysqli_query($this->conexao,$strSQL);
         
-        
+       
 
     }
     
@@ -53,6 +53,16 @@ class ArtigoDAO{
     
     function listarArtigos() {
         $sql = "SELECT * FROM blg_artigo";
+        $resultado = mysqli_query($this->conexao, $sql);
+        $lista = array();
+        while($registro = $resultado->fetch_assoc()) {
+            $lista[] = $registro;
+        }
+        return $lista;
+    }
+    
+    function listarArtigosPorIdUser($idUser) {
+        $sql = "SELECT * FROM blg_artigo where usuario_id=".$idUser;
         $resultado = mysqli_query($this->conexao, $sql);
         $lista = array();
         while($registro = $resultado->fetch_assoc()) {

@@ -10,7 +10,7 @@ if(isset($_REQUEST["titulo"])){
     
     $artigo = new Artigo(0, $_SESSION["user"], $_REQUEST["titulo"], $_REQUEST["artigo"], date('Y-m-d H:i:s'),date('Y-m-d H:i:s'));
     $artigoDAO->inserirArtigo($artigo);
-   // header("Location:admin.php");
+   header("Location:admin.php");
 }
 ?>
 <html>

@@ -95,7 +95,7 @@ $comentarios = $comentarioDAO->listarComentariosPorArtigo($idArtigo);
                 <div class="form-group">
                    Comentário
                    <div class="input-group">
-                       <input type="text" name="comentario" class="form-control" placeholder="Comentario...">
+                       <textarea  rows="4" cols="50" name="comentario" class="form-control" placeholder="Comentario..."></textarea>
                     </div>
                 </div>
                    
