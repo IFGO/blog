@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+<?php
+include ("../../persistencia/ArtigoDAO.php");
+include ("../../model/Artigo.php");
+include ("../../persistencia/Conexao.php");
+session_start();
+if(isset($_REQUEST["titulo"])){
+    $con = new Conexao();
+    $artigoDAO = new ArtigoDAO($con->getConection());
+    
+    $artigo = new Artigo(0, $_SESSION["user"], $_REQUEST["titulo"], $_REQUEST["artigo"], date('Y-m-d H:i:s'),date('Y-m-d H:i:s'));
+    $artigoDAO->inserirArtigo($artigo);
+   // header("Location:admin.php");
+}
+?>
 <html>
     <head>
         <title>Novo Artigo</title>
@@ -104,10 +118,10 @@
                         
                         <div class="content-inner">
                             <div class="form-wrapper">
-                                <form>
+                                <form method="post" action="novo-artigo.php">
                                     <div class="form-group">
                                         <label class="sr-only">Título</label>
-                                        <input type="text" class="form-control" id="title" placeholder="Digite aqui o Título">
+                                        <input type="text" class="form-control" id="title" name="titulo" placeholder="Digite aqui o Título">
                                     </div>
 
                                     <div class="form-group">

@@ -86,7 +86,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="logout">
+                                        <a href="../home.php" class="logout">
                                             <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
                                             log out
                                         </a>

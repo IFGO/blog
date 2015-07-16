@@ -15,7 +15,7 @@ $comentarioDAO = new ComentarioDAO($con->getConection());
 
 if(isset($_REQUEST["comentario"])){
   
-    $comentario = new Comentario(0,$idArtigo, $_REQUEST["nome"],date('Y-m-d H:i:s'), $_REQUEST["comentario"]);
+    $comentario = new Comentario(0,$idArtigo, $_REQUEST["nome"],date('Y-m-d'), $_REQUEST["comentario"]);
     
     $comentarioDAO->inserirComentario($comentario);
     
@@ -53,7 +53,7 @@ $comentarios = $comentarioDAO->listarComentariosPorArtigo($idArtigo);
                                     <small>Postado em 
                                         <?php 
                                 $date = date_create($artigo['artigo_datacriacao']);
-                                echo date_format($date, 'd/m/Y  H:i:s');?></small></h3>
+                                echo date_format($date, 'd/m/Y');?></small></h3>
                             </div>
 
                             <p><?php echo $artigo['artigo_corpo'] ?> </p>
