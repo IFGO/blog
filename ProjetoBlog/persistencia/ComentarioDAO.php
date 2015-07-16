@@ -18,9 +18,7 @@ class ComentarioDAO{
                 . "VALUES ('".$comentario->getAutor()."','".$comentario->getData()."','".$comentario->getConteudo()."',"
                 . "'".$comentario->getId_artigo()."')";
         
-        echo $strSQL;
-        
-        mysqli_query($this->conexao,$strSQL);
+       mysqli_query($this->conexao,$strSQL);
         
         
 
@@ -44,8 +42,8 @@ class ComentarioDAO{
         echo $strSQL;
     }
     
-    function listarArtigos() {
-        $sql = "SELECT * FROM blg_comentario";
+    function listarComentariosPorArtigo($idArtigo) {
+        $sql = "SELECT * FROM blg_comentario where artigo_id=".$idArtigo;
         $resultado = mysqli_query($this->conexao, $sql);
         $lista = array();
         while($registro = $resultado->fetch_assoc()) {
