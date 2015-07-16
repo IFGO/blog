@@ -10,7 +10,7 @@ class ArtigoDAO{
     private $conexao;
     
     function __construct($conexao) {
-        $this->conexao = $conexao;
+       $this->conexao = $conexao;
     }
     function inserirArtigo(Artigo $artigo) {
          
@@ -42,6 +42,13 @@ class ArtigoDAO{
               
         mysqli_query($this->conexao,$strSQL);
         echo $strSQL;
+    }
+    
+    function getArtigoPorId($id) {
+        $sql = "SELECT * FROM blg_artigo where artigo_id=".$id;
+        $resultado = mysqli_query($this->conexao, $sql);
+        $row =  mysqli_fetch_assoc($resultado);
+        return $row;
     }
     
     function listarArtigos() {
