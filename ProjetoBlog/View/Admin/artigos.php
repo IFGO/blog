@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+    if(!isset($_SESSION["user"])){
+        header("Location:../Login.php?erro");
+    }
+?>
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
@@ -99,7 +105,7 @@
                     <div id="content">
                         <header class="clearfix">
                             <h2 class="page_title pull-left">Todos os Artigos</h2>
-                            <button type="button" class="btn btn-xs btn-primary pull-right">Adicionar Novo Artigo</button>
+                            <button  type="button" class="btn btn-xs btn-primary pull-right"><a href="novo-artigo.php">Adicionar Novo Artigo</a></button>
                         </header>
                         
                         <div class="content-inner">
@@ -113,17 +119,27 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <?php
+                            include ("../../persistencia/ArtigoDAO.php");
+                            include ("../../persistencia/Conexao.php");
+                                $con = new Conexao();
+                                $artigoDAO = new ArtigoDAO($con->getConection());
+                                $artigos = $artigoDAO->listarArtigosPorIdUser($_SESSION["user"]);
+                                
+                                foreach($artigos as $artigo){
+                            ?>
                             <div class="row">
-                                <div class="col-md-1">
-                                    <span class="label label-success label-sm">Ativo</span>
-                                </div>
+                               
                                 <div class="col-md-8">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    <small>Adicionado em 15 março 2015</small>
+                                    <p> <b><?php echo $artigo['artigo_titulo'] ?></b></p>
+                                    <small>Adicionado em  <?php 
+                                $date = date_create($artigo['artigo_datacriacao']);
+                                echo date_format($date, 'd/m/Y');?></small>
                                 </div>
                                  <div class="col-md-3">
                                     <div class="article-actions">
-                                        <a class="btn btn-xs btn-default" href="#" role="button">
+                                        <a class="btn btn-xs btn-default" href="../post.php?id=<?php echo $artigo['artigo_id']?>" role="button">
                                             <span class="glyphicon glyphicon-folder-open" aria-hidden="true">&nbsp;Visualizar</span>
                                         </a>
                                         <a class="btn btn-xs btn-default" href="#" role="button">
@@ -135,6 +151,8 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr>
+                                <?php } ?>
                             <hr>
                             <div class="row">
                                 <div class="col-md-12">
