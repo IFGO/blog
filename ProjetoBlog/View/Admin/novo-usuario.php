@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/styles.css" rel="stylesheet">
-        <title>Artigos</title>
+        <title>Novo Usuário</title>
 
         <!-- Bootstrap CSS -->
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
