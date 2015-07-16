@@ -108,9 +108,21 @@
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="exampleInputAmount" placeholder="Pesquisar">
                                         <span class="input-group-btn">
-                                            <button type="button" class="btn btn-default">Ok!</button>
+                                            <button type="button" class="btn btn-primary">Ok!</button>
                                         </span>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <span class="label label-success">Ativo</span>
+                                </div>
+                                <div class="col-md-8">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <small>Adicionado em 15 março 2015</small>
+                                </div>
+                                 <div class="col-md-3">
+                                    
                                 </div>
                             </div>
                         </div>
