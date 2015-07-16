@@ -103,10 +103,10 @@
                         </header>
                         
                         <div class="content-inner">
-                            <div class="row">
+                            <div class="row search-row">
                                 <div class="col-md-12">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="Pesquisar">
+                                        <input type="text" class="form-control search-field" id="search" placeholder="Pesquisar">
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-primary">Ok!</button>
                                         </span>
@@ -115,14 +115,40 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-1">
-                                    <span class="label label-success">Ativo</span>
+                                    <span class="label label-success label-sm">Ativo</span>
                                 </div>
                                 <div class="col-md-8">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                     <small>Adicionado em 15 março 2015</small>
                                 </div>
                                  <div class="col-md-3">
-                                    
+                                    <div class="article-actions">
+                                        <a class="btn btn-xs btn-default" href="#" role="button">
+                                            <span class="glyphicon glyphicon-folder-open" aria-hidden="true">&nbsp;Visualizar</span>
+                                        </a>
+                                        <a class="btn btn-xs btn-default" href="#" role="button">
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true">&nbsp;Editar</span>
+                                        </a>
+                                        <a class="btn btn-xs btn-default" href="#" role="button">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true">&nbsp;Excluir</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <nav>
+                                        <ul class="pagination">
+                                            <li><a href="#">&laquo;</a></li>
+                                            <li><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">&raquo;</a></li>
+                                        </ul>
+                                    </nav>
                                 </div>
                             </div>
                         </div>
