@@ -21,9 +21,9 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        include "persistencia/Conexao.php";
-        include "model/Usuario.php";
-        include "persistencia/UsuarioDAO.php";
+        include "../persistencia/Conexao.php";
+        include "../model/Usuario.php";
+        include "../persistencia/UsuarioDAO.php";
         $con = new Conexao();
         
        $usuario = new Usuario(2,"João", "diego_ta", "1999-03-24", "jao", "123");

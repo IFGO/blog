@@ -10,10 +10,10 @@ class Conexao {
     function __construct() {
         $this->conexao = mysqli_connect($this->host, $this->usuario, $this->senha, $this->db);
         if(!$this->conexao) { // 0, "" ou NULL = false
-            echo "Erro ao conectar com o banco de dados. ";
-            echo mysqli_errno($this->conexao);
+            //echo "Erro ao conectar com o banco de dados. ";
+            //echo mysqli_errno($this->conexao);
         }else{
-            echo "Conectado com o banco!!";
+            //echo "Conectado com o banco!!";
         }
     }
     

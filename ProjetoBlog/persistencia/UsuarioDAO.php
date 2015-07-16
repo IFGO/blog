@@ -55,5 +55,14 @@ class UsuarioDAO{
         return $lista;
     }
     
+     function verificaUsuario($login,$password){
+        $sql = "SELECT * FROM blg_usuario where usuario_email= '".$login."' AND usuario_senha = '".$password."'";
+        $result =  mysqli_query($this->conexao, $sql);
+        
+        $row =  mysqli_fetch_assoc($result);
+        
+        return $row["usuario_id"];
+    }
+    
 }
 
