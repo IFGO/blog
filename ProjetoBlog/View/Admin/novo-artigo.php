@@ -112,7 +112,7 @@
 
                                     <div class="form-group">
                                         <label class="sr-only">Tags</label>
-                                        <input type="text" class="form-control" id="title" placeholder="Digite Tags">
+                                        <input type="text" class="form-control raquel" id="title" placeholder="Digite Tags">
                                     </div>
 
                                     <div class="form-group">
