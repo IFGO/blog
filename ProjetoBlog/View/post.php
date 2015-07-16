@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<?php
+if(isset($_REQUEST["id"])){
+include ("../persistencia/ArtigoDAO.php");
+include ("../persistencia/Conexao.php");
+$con = new Conexao();
+$artigoDAO = new ArtigoDAO($con->getConection());
+$artigo = $artigoDAO->getArtigoPorId($_REQUEST["id"]);
+}
+?>
 <html>
     <head>
         <title>Post</title>
@@ -24,13 +33,15 @@
                         <div class="panel-body">
 
                             <div class="page-header">
-                                <h3>test teste testet tsetstete <small>Postado em 10 de junho</small></h3>
+                                <h3><?php echo $artigo['artigo_titulo'] ?> 
+                                    <small>Postado em 
+                                        <?php 
+                                $date = date_create($artigo['artigo_datacriacao']);
+                                echo date_format($date, 'd/m/Y  H:i:s');?></small></h3>
                             </div>
 
-                            <img class="featureImg" src="imagens/android.jpg" width="100%">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim lacus, dictum in fringilla vel, sagittis et sem. Nam gravida leo quam, eu ultricies diam commodo id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut pulvinar sapien nec dolor viverra malesuada. Quisque ac justo a mauris vulputate cursus. Sed non mauris neque. Pellentesque tincidunt egestas enim at congue. Nulla congue, metus eu rhoncus vulputate, metus risus suscipit orci, sed congue augue justo sit amet metus.</p>
-
-                            <h4>Texto...</h4>
+                            <p><?php echo $artigo['artigo_corpo'] ?> </p>
+                            
                         </div>
                     </div>
                 </div>
@@ -41,18 +52,8 @@
                             <h4 class="list-group-item-heading">Loren Ipsum</h4>
                             <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim lacus, dictum in fringilla vel, sagittis et sem. Nam gravida leo quam, eu ultricies diam</p>
                         </a>
-                        <a href="#" class="list-group-item">
-                            <h4 class="list-group-item-heading">Loren Ipsum</h4>
-                            <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim lacus, dictum in fringilla vel, sagittis et sem. Nam gravida leo quam, eu ultricies diam</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <h4 class="list-group-item-heading">Loren Ipsum</h4>
-                            <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim lacus, dictum in fringilla vel, sagittis et sem. Nam gravida leo quam, eu ultricies diam</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <h4 class="list-group-item-heading">Loren Ipsum</h4>
-                            <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim lacus, dictum in fringilla vel, sagittis et sem. Nam gravida leo quam, eu ultricies diam</p>
-                        </a>
+                       
+                       
                     </div>
                 </div>
 

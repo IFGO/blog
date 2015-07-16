@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+    if(!isset($_SESSION["user"])){
+        header("Location:../Login.php?erro");
+    }
+?>
 <html>
     <head>
         <title>Administração Brog</title>
