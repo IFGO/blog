@@ -21,8 +21,7 @@
             <div class="jumbotron">
                 <center><h1>Bem Vindo!</h1>
                     <p>Ao melhor blog de todos os tempos!</p>
-                    <a class="btn btn-default">Clique aqui!</a>
-                    <a class="btn btn-info">Compartilhe!</a></center>        
+                      
             </div>
 
         </div>
@@ -30,39 +29,29 @@
         <div class="container">
 
             <div class="row">
+                <?php
+                    include ("../persistencia/Conexao.php");
+                    include ("../persistencia/ArtigoDAO.php");
+                    
+                    $con = new Conexao();
+                    $artigoDAO = new ArtigoDAO($con->getConection());
+                    
+                    $lista = $artigoDAO->listarArtigos();
+                    
+                    foreach($lista as $artigo){
+                        
+                   
+                ?>
 
-                <div class="col-md-3">
+                    <div class="col-md-3">
 
-                    <h3><a href="#">Artigo 1 do brog</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim lacus, dictum in fringilla vel.</p>
-                    <a href="#" class="btn btn-default">Leia Mais</a>
+                        <h3><a href="post.php?id=<?php echo $artigo['artigo_id']?>"><?php echo $artigo['artigo_titulo'] ?></a></h3>
+                        <p><?php echo $artigo['artigo_corpo'] ?></p>
+                        <a href="post.php?id=<?php echo $artigo['artigo_id']?>" class="btn btn-default">Leia Mais</a>
 
-                </div>
-
-                <div class="col-md-3">
-
-                    <h3><a href="#">Artigo 2 do brog</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim lacus, dictum in fringilla vel.</p>
-                    <a href="#" class="btn btn-default">Leia Mais</a>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <h3><a href="#">Artigo 3 do brog</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim lacus, dictum in fringilla vel.</p>
-                    <a href="#" class="btn btn-default">Leia Mais</a>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <h3><a href="#">Artigo 4 do brog</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim lacus, dictum in fringilla vel.</p>
-                    <a href="#" class="btn btn-default">Leia Mais</a>
-
-                </div>
-
+                    </div>
+                    <?php }?>
+              
             </div>
 
         </div>
