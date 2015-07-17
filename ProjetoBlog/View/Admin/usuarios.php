@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+    if(!isset($_SESSION["user"])){
+        header("Location:../Login.php?erro");
+    }
+?>
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
