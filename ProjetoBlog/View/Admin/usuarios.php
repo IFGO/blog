@@ -120,34 +120,22 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-1">
-                                    <span class="label label-success label-sm">Ativo</span>
-                                </div>
-                                <div class="col-md-8">
-                                    <p>Carlos da Silva Sauro</p>
-                                </div>
-                                 <div class="col-md-3">
-                                    <div class="article-actions">
-                                        <a class="btn btn-xs btn-default" href="#" role="button">
-                                            <span class="glyphicon glyphicon-folder-open" aria-hidden="true">&nbsp;Visualizar</span>
-                                        </a>
-                                        <a class="btn btn-xs btn-default" href="#" role="button">
-                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true">&nbsp;Editar</span>
-                                        </a>
-                                        <a class="btn btn-xs btn-default" href="#" role="button">
-                                            <span class="glyphicon glyphicon-remove" aria-hidden="true">&nbsp;Excluir</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+
+
+                            <?php
+                            include ("../../persistencia/UsuarioDAO.php");
+                            include ("../../persistencia/Conexao.php");
+                                $con = new Conexao();
+                                $usuarioDAO = new UsuarioDAO($con->getConection());
+                                $usuarios = $usuarioDAO->listarUsuarios();
+                                
+                                foreach($usuarios as $usuario){
+                            ?>
+
 
                             <div class="row">
-                                <div class="col-md-1">
-                                    <span class="label label-success label-sm">Ativo</span>
-                                </div>
                                 <div class="col-md-8">
-                                    <p>Maria da Silva</p>
+                                    <p><?php echo $usuario['usuario_nome'] ?></p>
                                 </div>
                                  <div class="col-md-3">
                                     <div class="article-actions">
@@ -163,6 +151,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <hr>
+                            <?php } ?>
+
+
 
                             <hr>
                             <div class="row">
