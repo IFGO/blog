@@ -4,13 +4,13 @@
     include ("../../model/Usuario.php");
     include ("../../persistencia/Conexao.php");
     session_start();
-    if(isset($_REQUEST["nomeUsuario"])){
+    if(isset($_REQUEST["nome"])){
         $con = new Conexao();
         $usuarioDAO = new UsuarioDAO($con->getConection());
         
         $usuario = new Usuario(0, $_REQUEST["nome"], $_REQUEST["email"], $_REQUEST["aniversario"] ,$_REQUEST["apelido"],  $_REQUEST["senha"]);
         $usuarioDAO->inserirUsuario($usuario);
-       header("Location:admin.php");
+       header("Location:usuarios.php");
     }
     ?>
     <html lang="pt-br">
@@ -180,7 +180,11 @@
                     </div>
 
                     </fieldset>
+                    <div class="clearfix">
+                                        <button type="submit" class="btn btn-primary pull-right">Adicionar</button>
+                                    </div>
                     </form>
+                    
 
 
 
